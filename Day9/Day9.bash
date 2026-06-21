@@ -38,8 +38,8 @@ sudo cat mariadb.log
 # to view the permissions of the /run/mariadb directory
 ls -l /run/mariadb
 
-# change mode to ugo+rwx for the directory
-sudo chmod 777 /run/mariadb
+# change mode to u=rwx + go=r-x for the directory
+sudo chmod 755 /run/mariadb
 
 # restart mariadb service
 sudo systemctl restart mariadb
